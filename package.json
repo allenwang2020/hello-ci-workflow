@@ -1,0 +1,17 @@
+{
+  "name": "hello-ci-workflow",
+  "version": "1.0.0",
+  "description": "hello ci workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "allen wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.1"
+  }
+}
