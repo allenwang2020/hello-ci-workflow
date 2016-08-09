@@ -2,7 +2,7 @@
 machine:    
 # 環境改成 docker    
     services:      
-       - docker-machine    
+       - docker
 dependencies:    
         override:      
 # 建構方式使用 docker build      
