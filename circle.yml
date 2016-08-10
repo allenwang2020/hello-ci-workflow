@@ -6,14 +6,14 @@ machine:
 dependencies:    
         override:      
 # 建構方式使用 docker build      
-        # - docker build -t hello-ci-workflow .   
-        - docker-compose up -d
+         - docker info
+         - docker build -t hello-ci-workflow .   
+        # - docker-compose up -d
          
 test:    
     override:      
         - ./node_modules/.bin/mocha      
 # 使用 curl 測試 docker 是否有順利執行 node   
-       #  - docker run -d -p 3000:3000 hello-ci-workflow
-       #  - docker ps   
-       #  - sleep 10      
-        - curl --retry 10 --retry-delay 5 -v http://151.101.36.162:3000
+        #- docker run -d -p 3000:3000 hello-ci-workflow
+        - docker run -d -p 9200:9200 hello-ci-workflow; sleep 10
+        - curl --retry 10 --retry-delay 5 -v http://localhost:9200
