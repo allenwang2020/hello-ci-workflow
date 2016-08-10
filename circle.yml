@@ -1,5 +1,7 @@
 # circle.yml  
 machine:    
+    hosts:
+       localhost: 127.0.0.1
 # 環境改成 docker    
     services:      
        - docker    
