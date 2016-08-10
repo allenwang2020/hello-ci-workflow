@@ -10,3 +10,4 @@ RUN npm install
 # 開放 container 的 3000 port  
 # EXPOSE 3000 
 CMD npm test
+CMD npm start
