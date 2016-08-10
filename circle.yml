@@ -9,6 +9,7 @@ dependencies:
          #- docker info
          #- docker build -t hello-ci-workflow .   
          - docker-compose up -d
+         - npm test
          
 test:    
     override:      
