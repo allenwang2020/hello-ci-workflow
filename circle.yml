@@ -1,7 +1,5 @@
 # circle.yml  
 machine:    
-    hosts:
-       localhost: 127.0.0.1
 # 環境改成 docker    
     services:      
        - docker    
@@ -14,8 +12,8 @@ dependencies:
          
 test:    
     override:      
-        - ./node_modules/.bin/mocha      
+        #- ./node_modules/.bin/mocha      
 # 使用 curl 測試 docker 是否有順利執行 node   
         #- docker run -d -p 3000:3000 hello-ci-workflow
-        - docker run -d -p 9200:9200 hello-ci-workflow; sleep 10
-        - curl --retry 10 --retry-delay 5 -v http://localhost:9200
+        - docker run -d -p 3000:3000 hello-ci-workflow; sleep 10
+        - curl --retry 10 --retry-delay 5 -v http://localhost:3000
