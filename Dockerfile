@@ -9,4 +9,4 @@ WORKDIR /hello-ci-workflow
 # 安裝 npm package  
 ADD . /hello-ci-workflow  
 RUN npm install    
-CMD npm test
+CMD npm start
