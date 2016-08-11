@@ -9,9 +9,7 @@ machine:
 dependencies:  
    pre:
     # 安裝 eb
-    - curl -O https://bootstrap.pypa.io/get-pip.py
-    - sudo python get-pip.py
-    - sudo pip install awsebcli 
+   - sudo pip install awsebcli 
    override:      
 # 建構方式使用 docker build      
    #- docker info
