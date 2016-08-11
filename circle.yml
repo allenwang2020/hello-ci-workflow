@@ -7,7 +7,7 @@ machine:
 dependencies:  
    pre:
     # 安裝 eb
-   - sudo pip install awsebcli 
+   - sudo pip install 'awsebcli==3.7.4' --force-reinstall
    override:      
 # 建構方式使用 docker build      
    #- docker info
