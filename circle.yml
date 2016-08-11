@@ -27,6 +27,5 @@ test:
 deployment:    
    production:      
     branch: master      
-    commands: 
-       - eb init -p docker
+    commands:
        - eb deploy env-roduction  
