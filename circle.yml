@@ -29,4 +29,4 @@ deployment:
    production:      
     branch: master      
     commands:
-     - eb deploy env-roduction  
+     - eb deploy env-production  
