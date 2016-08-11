@@ -1,13 +1,15 @@
 # circle.yml  
 machine:    
 # 安裝 eb 需要 python    
+    python:      
+       version: 2.7.9 
 # 環境改成 docker    
     services:      
        - docker    
 dependencies:  
    pre:
     # 安裝 eb
-   - sudo pip install 'awsebcli==3.7.4' --force-reinstall
+   - sudo pip install awsebcli 
    override:      
 # 建構方式使用 docker build      
    #- docker info
