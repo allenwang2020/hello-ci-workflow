@@ -27,7 +27,7 @@ test:
 # 新增一筆部署腳本production  
 deployment:    
    development:
-    branch: test-github-flow 
+    branch: develop 
     commands:
      - eb deploy env-development  
    production:      
