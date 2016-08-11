@@ -26,6 +26,10 @@ test:
         - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 # 新增一筆部署腳本production  
 deployment:    
+   development:
+    branch: test-github-flow 
+    commands:
+     - eb deploy env-development  
    production:      
     branch: master      
     commands:
