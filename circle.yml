@@ -28,4 +28,5 @@ deployment:
    production:      
     branch: master      
     commands:
-       - eb deploy env-roduction  
+     - bash ./setup-eb.sh
+     - eb deploy env-roduction  
