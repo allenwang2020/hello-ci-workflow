@@ -13,19 +13,20 @@ dependencies:
    override:      
 # 建構方式使用 docker build      
    #- docker info
-   - docker build -t hello-ci-workflow .   
-   #- docker-compose up -d
+   #- docker build -t hello-ci-workflow .   
+   - docker-compose up -d
          
 test:    
     override:      
         - npm test
         #- ./node_modules/.bin/mocha      
         # 使用 curl 測試 docker 是否有順利執行 node   
-        - docker run -d -p 3000:3000 hello-ci-workflow; sleep 10
+        #- docker run -d -p 3000:3000 hello-ci-workflow; sleep 10
         - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 # 新增一筆部署腳本  
 deployment:    
    production:      
     branch: master      
     commands: 
+       - eb init -p docker
        - eb deploy env-roduction  
