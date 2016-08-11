@@ -10,6 +10,7 @@ dependencies:
    pre:
     # 安裝 eb
    - pip install awsebcli
+   - eb init -p Docker -r us-west-2
    override:      
 # 建構方式使用 docker build      
    #- docker info
@@ -28,5 +29,4 @@ deployment:
    production:      
     branch: master      
     commands:
-     - bash ./setup-eb.sh
      - eb deploy env-roduction  
